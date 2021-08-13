@@ -34,7 +34,7 @@ This project will use the following technologies:
 
 Friday Afternoon & Weekend 8/15/21 -- will start working on implementing the environment and  the background
 
-Monday - 8/16/21 - Will have bckground up and running and have my first bots spwan on the map.
+Monday - 8/16/21 - Will have background up and running and have my first bots spawn on the map.
 
 Tuesday - 8/17/21 - I will have a working skeleton with proper game logic.
 
