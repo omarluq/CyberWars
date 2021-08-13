@@ -10,7 +10,7 @@ Users will be able to:
  - move using up, down, left and right arrow keys, shoot your weapon using the Q key
  - toggle music on and off
 
- 
+
 This project will also include:
   - an about to explain rules of the game
   - links to github/linkedin
@@ -27,6 +27,20 @@ This project will use the following technologies:
 # Wireframe 
 
 ![wireframe](./Wireframe.png)
+
+
+# Implementation Timeline
+
+
+Friday Afternoon & Weekend 8/15/21 -- will start working on implementing the environment and  the background
+
+Monday - 8/16/21 - Will have bckground up and running and have my first bots spwan on the map.
+
+Tuesday - 8/17/21 - I will have a working skeleton with proper game logic.
+
+Wednesday - 8/18/21 - I will have added functionality and effects/ add a menu button, start/restart button , health bars, music
+
+Thursday Morning - 8/19/21 - The final polishing will be done.
 
 
 
