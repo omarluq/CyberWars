@@ -9,6 +9,8 @@ Users will be able to:
  - start, pause, and restart the game 
  - move using up, down, left and right arrow keys, shoot your weapon using the Q key
  - toggle music on and off
+
+ 
 This project will also include:
   - an about to explain rules of the game
   - links to github/linkedin
