@@ -24,7 +24,7 @@ This project will use the following technologies:
 
 # Wireframe 
 
-![wireframe](/Users/omarluq/Desktop/CyberWars/Wireframe.png)
+![wireframe](./Wireframe.png)
 
 
 
