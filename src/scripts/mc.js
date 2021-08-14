@@ -7,6 +7,7 @@ class Mc {
         this.x = 20
         this.y = 580
         this.points = 25 
+        this.left = false 
     }
 
     
@@ -14,6 +15,7 @@ class Mc {
 
     movef(ctx, img,canvas, n, i) {
         let self = this
+        this.left = false
         self.img.src = `./imgs/mc/walk/herowalking${n}.png`
           this.img.onload  = function() {
             ctx.clearRect(0,0, canvas.width, canvas.height)
@@ -25,6 +27,7 @@ class Mc {
     }
 
     moveb(ctx, img,canvas, n, i) {
+        this.left = true 
         let self = this
         self.img.src = `./imgs/mc/walkb/herowalking${n}.png`
           this.img.onload  = function() {
@@ -56,7 +59,17 @@ class Mc {
             console.log(ctx)
             ctx.clearRect(0,0, canvas.width, canvas.height)
             ctx.drawImage(img,0,0)
-            ctx.drawImage(self.img, i, 580, 150, 150)
+            ctx.drawImage(self.img, i-10, 610, 175, 175)
+        }
+    }
+
+    attack(ctx, img, canvas, b) {
+        let self = this 
+        this.img.src = `./imgs/mc/walkb/attack/robot4-attack${b}.png`
+        this.img.onload = function() {
+            ctx.clearRect(0,0, canvas.width, canvas.height)
+            ctx.drawImage(img,0,0)
+            ctx.drawImage(self.img, self.x, self.y-25, 225, 225)
         }
     }
 }
