@@ -2,7 +2,7 @@
 
 # Background
 
-Cyber wars is an arcade shooter style game with high resolution, in the year 2170 the robots rebelled against humans due to all the damage that we have caused to the planet, your mission is to protect one of the last standing human cities and prevent the robots from entering it.
+Cyber wars is an arcade shooter style game , in the year 2170 the robots rebelled against humans due to all the damage that we have caused to the planet, your mission is to protect one of the last standing human cities and prevent the robots from entering it.
 
 # Functionality & MVP
 Users will be able to:
