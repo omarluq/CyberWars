@@ -1,7 +1,7 @@
 
 
 #body{
-    background-image: url(../imgs/background/bodybg.jpg);
+    background-image: url(../imgs/background/bodybg.png);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,10 +9,11 @@
 }
 
 #canvas{
-    background: transparent; 
+    background: #c7a361; 
     position: absolute;
     top: 120px;
-    right: 15%;
+    right: 28%;
+    border: 1px solid black;
 }
 
 #div1{

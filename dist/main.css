@@ -1,1 +1,1 @@
-#body{background-image:url(../imgs/background/bodybg.jpg);display:flex;justify-content:center;align-items:center;flex-wrap:wrap}#canvas{background:transparent;position:absolute;top:120px;right:15%}#div1{display:flex;justify-content:center;align-items:center}
+#body{background-image:url(../imgs/background/bodybg.png);display:flex;justify-content:center;align-items:center;flex-wrap:wrap}#canvas{background:#c7a361;position:absolute;top:120px;right:28%;border:1px solid #000}#div1{display:flex;justify-content:center;align-items:center}
