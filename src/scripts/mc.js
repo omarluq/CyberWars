@@ -28,9 +28,7 @@ class Mc {
         ctx.drawImage(img,70,100)
         ctx.drawImage(this.img, this.width * this.frameX, this.height * this.attackFrame, this.width, this.height, this.x, this.y , this.width, this.height)   
     }
-
   
-    
 }
 
 module.exports = Mc
