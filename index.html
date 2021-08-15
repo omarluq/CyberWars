@@ -16,9 +16,18 @@
         <img src="./imgs/background/CyberWars.png">
     </header>
 
+    <div  id='richard' title="Richard">
+        <img  src="./imgs/richard/richard.gif" width="65px" height="65px">
+    </div>
+    
+    <style>#richard{position: absolute; top: 400px; left: 330px; z-index: 1; }</style>
+    <style>#richard:hover::after{ content: attr(title); font-size: 10px; position: absolute; top: 10px; left:15px;}</style>
+
     <div id='div1'>
     <canvas id="canvas"></canvas>
     </div>
+
+        
 </body>
 
 </html>

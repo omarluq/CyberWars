@@ -1,5 +1,6 @@
 const Game = require('./scripts/game')
 const Mc = require('./scripts/mc')
+const LilShooter = require('./scripts/lilShooter')
 window.mc = Mc
 
 let mc = new Mc()
@@ -17,10 +18,19 @@ document.addEventListener('DOMContentLoaded', function(){
     let ctx = canv.getContext('2d')
     canv.width = 700
     canv.height = 600
+    let shooter = new LilShooter()
     let game = new Game(ctx, mc)
     game.start(gamebg, canvas)
+  
 
-   let keys = {}
+    let keys = {}
+
+
+   
+
+    
+    
+
     document.addEventListener('keydown', function(event){
         
         keys[event.code] = true
@@ -156,6 +166,9 @@ document.addEventListener('DOMContentLoaded', function(){
         mc.frameY = 0 
         game.start(gamebg, canvas)
     })
+
+
+
 
 
 
