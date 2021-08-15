@@ -7,6 +7,9 @@ let mc = new Mc()
 let gamebg = new Image()
 gamebg.src = "./imgs/background/banner.png"
 
+let richard = new Image() 
+richard.src = "./imgs/richard/idle.png"
+
 
 document.addEventListener('DOMContentLoaded', function(){
     
@@ -18,8 +21,6 @@ document.addEventListener('DOMContentLoaded', function(){
     game.start(gamebg, canvas)
 
    let keys = {}
-
-  
     document.addEventListener('keydown', function(event){
         
         keys[event.code] = true
@@ -85,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
             let down = setInterval(function(){
                 mc.img.src = "./imgs/hero/teleport.png"
                 mc.move(ctx, gamebg, canvas)
+                mc.drawRichard(ctx, richard)
                 if (mc.y < 490 ){mc.y += mc.speed }
                 mc.frameY += 1
                 if (mc.frameY === 9 ) {
@@ -115,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function(){
             let att = setInterval(function(){
                 mc.img.src = "./imgs/hero/attack.png"
                 mc.attack(ctx, gamebg, canvas)
+                mc.drawRichard(ctx, richard)
                 mc.attackFrame += 1
                 if (mc.attackFrame === 18) {
                     mc.attackFrame = 0 

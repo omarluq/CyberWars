@@ -3,6 +3,7 @@ class Game {
         this.ctx = ctx
         this.mc = mc
         this.enemies = enemies
+
     }
 
     start(img, canvas) {
@@ -12,6 +13,8 @@ class Game {
             self.ctx.drawImage(img,70,100)
             self.ctx.drawImage(self.mc.img, 0, 0, self.mc.width, self.mc.height, self.mc.x, self.mc.y , self.mc.width, self.mc.height)
         }
+
+
     }
 
 
