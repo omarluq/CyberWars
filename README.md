@@ -46,5 +46,5 @@ Thursday Morning - 8/19/21 - The final polishing will be done.
 
 # Credits
 
-Art and sprites courtesy of Mobile Game Graphics https://mobilegamegraphics.itch.io/
+Art and sprites courtesy of Mobile Game Graphics https://penusbmic.cardd.co
 
