@@ -17,7 +17,8 @@ class Game {
         this.img.onload = function() {
             self.ctx.clearRect(0,0,self.canvas.width, self.canvas.height )
             self.ctx.drawImage(self.img,70,100)
-            self.ctx.drawImage(self.mc.img, 0, 0, self.mc.width, self.mc.height, self.mc.x, self.mc.y , self.mc.width, self.mc.height) 
+            self.ctx.drawImage(self.mc.img, 0, 0, self.mc.width, self.mc.height, self.mc.x, self.mc.y , self.mc.width, self.mc.height)
+            self.mc.healthbar.draw(self.ctx) 
         }  
     }
 
