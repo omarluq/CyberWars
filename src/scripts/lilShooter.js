@@ -13,8 +13,9 @@ class LilShooter extends Enemy {
 
     draw(ctx){
         ctx.drawImage(this.img, this.width * this.frameX, this.height * this.frameY, this.width, this.height, this.x, this.y, this.width, this.height)
-        this.x -= this.speed
+        
         if (this.frameCount < 5) {
+            this.x -= this.speed
             this.frameCount++
         } else if (this.frameX < 5) {
            this.frameX++

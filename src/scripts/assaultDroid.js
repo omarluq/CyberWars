@@ -7,8 +7,8 @@ class AssualtDroid extends Enemy {
         super()
         this.img.src = './imgs/enemies/assualtDroid/walk.png'
         this.width = 161
-        this.height = 38
-        this.x = 600
+        this.height = 39
+        this.x = 620
         this.points = 20
         
     }
@@ -17,9 +17,10 @@ class AssualtDroid extends Enemy {
     draw(ctx){
         let self = this
         ctx.drawImage(this.img, this.width * this.frameX, this.height * this.frameY, this.width, this.height, this.x, this.y, this.width, this.height)
-        this.x -= this.speed
+        
         
             if (self.frameCount < 5) {
+                this.x -= this.speed
                 self.frameCount++
             } else if (self.frameY < 5) {
                self.frameY++

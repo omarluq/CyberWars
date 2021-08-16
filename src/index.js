@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function(){
     }, 5000);
     setInterval(() => {
         enemiesArr.push(new Poison())
-    }, 7000);
+    }, 10000);
     setInterval(() => {
         enemiesArr.push(new AssualtDroid())
-    }, 9000);
+    }, 13000);
 
 
 
