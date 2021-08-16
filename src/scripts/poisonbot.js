@@ -8,7 +8,6 @@ class Poison extends Enemy {
         this.width = 156
         this.height = 48
         this.x = 600
-        // this.y = 500
         this.points = 10 
     }
 

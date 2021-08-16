@@ -17,17 +17,6 @@ document.addEventListener('DOMContentLoaded', function(){
     
     let canv = document.getElementById('canvas')
     let ctx = canv.getContext('2d')
-    // let en = new LilShooter()
-    // let p = new Poison()
-    // let a = new AssualtDroid()
-
-    // let shooter = LilShooter.constructor 
-    // let poison = Poison.constructor
-    // let assualt = AssualtDroid.constructor
-
-
-
-
     let enemiesArr = []
 
     setInterval(() => {

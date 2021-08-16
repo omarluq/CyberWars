@@ -18,13 +18,7 @@ class Game {
             this.mc.draw(this.ctx, this.mc.attackFrame)
         }
         this.mc.healthbar.draw(this.ctx) 
-        this.enemies.forEach(el=> el.draw(this.ctx))
-        // this.en.draw(this.ctx)
-        // this.p.draw(this.ctx)
-        // this.a.draw(this.ctx)
-        
-
-        
+        this.enemies.forEach(el=> el.draw(this.ctx))  
     }
 
     start() {

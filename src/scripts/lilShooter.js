@@ -8,7 +8,6 @@ class LilShooter extends Enemy {
         this.width = 128
         this.height = 64
         this.x = 600
-        // this.y = 400
         this.points = 10 
     }
 
