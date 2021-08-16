@@ -1,25 +1,30 @@
-const LilShooter = require('./lilShooter.js')
+// const LilShooter = require('./lilShooter.js')
 
 class Game {
-    constructor(ctx, mc, enemie, img, canvas) {
+    constructor(ctx, mc, img, canvas, en, p) {
         this.ctx = ctx
         this.mc = mc
-        this.enemie = enemie
         this.img = img 
         this.canvas = canvas
+        this.en = en
+        this.p = p
         this.start = this.start.bind(this)
-
     }
 
     draw() {
-        let self = this
         
-        this.img.onload = function() {
-            self.ctx.clearRect(0,0,self.canvas.width, self.canvas.height )
-            self.ctx.drawImage(self.img,70,100)
-            self.ctx.drawImage(self.mc.img, 0, 0, self.mc.width, self.mc.height, self.mc.x, self.mc.y , self.mc.width, self.mc.height)
-            self.mc.healthbar.draw(self.ctx) 
-        }  
+        this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height )
+        this.ctx.drawImage(this.img,70,100)
+        if (!this.mc.attack) {
+            this.mc.draw(this.ctx, this.mc.frameY)
+        } else {
+            this.mc.draw(this.ctx, this.mc.attackFrame)
+        }
+        this.mc.healthbar.draw(this.ctx) 
+        this.en.draw(this.ctx)
+        this.p.draw(this.ctx)
+
+        
     }
 
     start() {
