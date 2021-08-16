@@ -179,10 +179,6 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
         if (mc.frameY === 6) mc.frameY = 0;
-
-        document.addEventListener('keyup', function(event){
-           delete keys[event.code] 
-        })
         
           
     })
