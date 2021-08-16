@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function(){
             if (keys['KeyD'] ){
             let aud = new Audio("./imgs/sounds/step25.wav")
             aud.play()
+            aud.volume = 0.2
             mc.left = false
             mc.img.src = "./imgs/hero/idleandwalkr.png"
             if (mc.x < 635){
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function(){
         if (keys['KeyA'] ) {
             let aud = new Audio("./imgs/sounds/step25.wav")
             aud.play()
+            aud.volume = 0.2
             mc.left = true
             mc.img.src = "./imgs/hero/idleandwalkl.png"
             if (mc.x > -52){
@@ -65,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function(){
            if (!mc.left){
             let aud = new Audio("./imgs/sounds/Wind-Shoowsh-Transition-www.fesliyanstudios.com.mp3")
             aud.play()
+            aud.volume = 0.2
             let up =setInterval(function(){
                     mc.img.src = "./imgs/hero/teleport.png"
                     mc.move(ctx, gamebg, canvas)
@@ -79,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 }, 50)} else {
                     let aud = new Audio("./imgs/sounds/Wind-Shoowsh-Transition-www.fesliyanstudios.com.mp3")
                     aud.play()
+                    aud.volume = 0.2
                     let up =setInterval(function(){
                         mc.img.src = "./imgs/hero/teleportl.png"
                         mc.move(ctx, gamebg, canvas)
@@ -103,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function(){
             if(!mc.left){
                 let aud = new Audio("./imgs/sounds/Wind-Shoowsh-Transition-www.fesliyanstudios.com.mp3")
                 aud.play()
+                aud.volume = 0.2
                 let down = setInterval(function(){
                 mc.img.src = "./imgs/hero/teleport.png"
                 mc.move(ctx, gamebg, canvas)
@@ -117,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }, 50)} else {
                 let aud = new Audio("./imgs/sounds/Wind-Shoowsh-Transition-www.fesliyanstudios.com.mp3")
                 aud.play()
+                aud.volume = 0.2
                 let down = setInterval(function(){
                     mc.img.src = "./imgs/hero/teleportl.png"
                     mc.move(ctx, gamebg, canvas)
@@ -136,8 +142,10 @@ document.addEventListener('DOMContentLoaded', function(){
         if (keys['KeyQ']) {
             if (!mc.left){
                 let audio = new Audio("./imgs/sounds/2 clash 5.mp3")
+                audio.volume = 0.1
                 audio.play()
-            let att = setInterval(function(){
+                
+                let att = setInterval(function(){
                 mc.img.src = "./imgs/hero/attack.png"
                 mc.attack(ctx, gamebg, canvas)
                 mc.attackFrame += 1
@@ -151,7 +159,9 @@ document.addEventListener('DOMContentLoaded', function(){
                 
             }, 50)} else {
                 let audio = new Audio("./imgs/sounds/2 clash 5.mp3")
+                audio.volume = 0.1
                 audio.play()
+                
                 let att = setInterval(function(){
                     mc.img.src = "./imgs/hero/attackl.png"
                     mc.attack(ctx, gamebg, canvas)
