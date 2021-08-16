@@ -63,6 +63,19 @@
 }
 
 
+#footer{
+    position: absolute;
+    top: 740px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+}
+
+#footer li {
+    list-style-type: "" ;
+}
+
 
 
 
