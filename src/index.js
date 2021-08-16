@@ -1,6 +1,7 @@
-const Game = require('./scripts/game')
-const Mc = require('./scripts/mc')
-const LilShooter = require('./scripts/lilShooter')
+
+import Game from './scripts/game'
+import Mc from './scripts/mc'
+import LilShooter from './scripts/lilShooter'
 window.mc = Mc
 
 let mc = new Mc()
@@ -8,8 +9,6 @@ let mc = new Mc()
 let gamebg = new Image()
 gamebg.src = "./imgs/background/banner.png"
 
-let richard = new Image() 
-richard.src = "./imgs/richard/idle.png"
 
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -19,22 +18,25 @@ document.addEventListener('DOMContentLoaded', function(){
     canv.width = 700
     canv.height = 600
     let shooter = new LilShooter()
-    let game = new Game(ctx, mc)
-    game.start(gamebg, canvas)
-  
+    let shooter2 = new LilShooter()
+    shooter2.y = 350
+    let game = new Game(ctx, mc, shooter,gamebg, canvas)
+    
+    let canv2 = document.getElementById('canvas2')
+    let ctx2 = canv.getContext('2d')
+    canv2.width = 701
+    canv2.height = 300
 
     let keys = {}
-
-
+    game.start()
    
-
-    
-    
 
     document.addEventListener('keydown', function(event){
         
         keys[event.code] = true
-        if (keys['ArrowRight'] ){
+            if (keys['KeyD'] ){
+            let aud = new Audio("./imgs/sounds/step25.wav")
+            aud.play()
             mc.left = false
             mc.img.src = "./imgs/hero/idleandwalkr.png"
             if (mc.x < 635){
@@ -45,7 +47,9 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     
 
-        if (keys['ArrowLeft'] ) {
+        if (keys['KeyA'] ) {
+            let aud = new Audio("./imgs/sounds/step25.wav")
+            aud.play()
             mc.left = true
             mc.img.src = "./imgs/hero/idleandwalkl.png"
             if (mc.x > -52){
@@ -56,9 +60,11 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         
 
-        if (keys['ArrowUp']) {
+        if (keys['KeyW']) {
             
            if (!mc.left){
+            let aud = new Audio("./imgs/sounds/Wind-Shoowsh-Transition-www.fesliyanstudios.com.mp3")
+            aud.play()
             let up =setInterval(function(){
                     mc.img.src = "./imgs/hero/teleport.png"
                     mc.move(ctx, gamebg, canvas)
@@ -71,6 +77,8 @@ document.addEventListener('DOMContentLoaded', function(){
                         mc.move(ctx, gamebg, canvas)
                     }
                 }, 50)} else {
+                    let aud = new Audio("./imgs/sounds/Wind-Shoowsh-Transition-www.fesliyanstudios.com.mp3")
+                    aud.play()
                     let up =setInterval(function(){
                         mc.img.src = "./imgs/hero/teleportl.png"
                         mc.move(ctx, gamebg, canvas)
@@ -90,10 +98,12 @@ document.addEventListener('DOMContentLoaded', function(){
             
         }
 
-        if (keys['ArrowDown']) {
+        if (keys['KeyS']) {
             
             if(!mc.left){
-            let down = setInterval(function(){
+                let aud = new Audio("./imgs/sounds/Wind-Shoowsh-Transition-www.fesliyanstudios.com.mp3")
+                aud.play()
+                let down = setInterval(function(){
                 mc.img.src = "./imgs/hero/teleport.png"
                 mc.move(ctx, gamebg, canvas)
                 if (mc.y < 490 ){mc.y += mc.speed }
@@ -105,6 +115,8 @@ document.addEventListener('DOMContentLoaded', function(){
                     mc.move(ctx, gamebg, canvas)
                 }
             }, 50)} else {
+                let aud = new Audio("./imgs/sounds/Wind-Shoowsh-Transition-www.fesliyanstudios.com.mp3")
+                aud.play()
                 let down = setInterval(function(){
                     mc.img.src = "./imgs/hero/teleportl.png"
                     mc.move(ctx, gamebg, canvas)
@@ -123,6 +135,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
         if (keys['KeyQ']) {
             if (!mc.left){
+                let audio = new Audio("./imgs/sounds/2 clash 5.mp3")
+                audio.play()
             let att = setInterval(function(){
                 mc.img.src = "./imgs/hero/attack.png"
                 mc.attack(ctx, gamebg, canvas)
@@ -136,6 +150,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
                 
             }, 50)} else {
+                let audio = new Audio("./imgs/sounds/2 clash 5.mp3")
+                audio.play()
                 let att = setInterval(function(){
                     mc.img.src = "./imgs/hero/attackl.png"
                     mc.attack(ctx, gamebg, canvas)
@@ -164,7 +180,6 @@ document.addEventListener('DOMContentLoaded', function(){
     document.addEventListener('keyup', function(event){
         delete keys[event.code]
         mc.frameY = 0 
-        game.start(gamebg, canvas)
     })
 
 

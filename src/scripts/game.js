@@ -1,21 +1,29 @@
 const LilShooter = require('./lilShooter.js')
 
 class Game {
-    constructor(ctx, mc) {
+    constructor(ctx, mc, enemie, img, canvas) {
         this.ctx = ctx
         this.mc = mc
-        // this.enemies = enemies
+        this.enemie = enemie
+        this.img = img 
+        this.canvas = canvas
+        this.start = this.start.bind(this)
 
     }
 
-    start(img, canvas) {
+    draw() {
         let self = this
-        img.onload = function() {
-            self.ctx.clearRect(0,0,canvas.width, canvas.height )
-            self.ctx.drawImage(img,70,100)
-            self.ctx.drawImage(self.mc.img, 0, 0, self.mc.width, self.mc.height, self.mc.x, self.mc.y , self.mc.width, self.mc.height)
-        }
         
+        this.img.onload = function() {
+            self.ctx.clearRect(0,0,self.canvas.width, self.canvas.height )
+            self.ctx.drawImage(self.img,70,100)
+            self.ctx.drawImage(self.mc.img, 0, 0, self.mc.width, self.mc.height, self.mc.x, self.mc.y , self.mc.width, self.mc.height) 
+        }  
+    }
+
+    start() {
+        this.draw()
+        requestAnimationFrame(this.start)
     }
 
 
@@ -23,4 +31,4 @@ class Game {
 
 }
 
-module.exports = Game
+export default Game

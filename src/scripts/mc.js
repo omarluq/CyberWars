@@ -10,7 +10,6 @@ class Mc {
         this.frameY = 0
         this.attackFrame = 0 
         this.speed = 10
-        this.moving = false
         this.left = false
     }
 
@@ -31,4 +30,4 @@ class Mc {
   
 }
 
-module.exports = Mc
+export default Mc
