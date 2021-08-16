@@ -3,6 +3,7 @@ import Game from './scripts/game'
 import Mc from './scripts/mc'
 import LilShooter from './scripts/lilShooter'
 import Poison from "./scripts/poisonbot"
+import AssualtDroid from './scripts/assaultDroid'
 window.mc = Mc
 
 let mc = new Mc()
@@ -16,11 +17,34 @@ document.addEventListener('DOMContentLoaded', function(){
     
     let canv = document.getElementById('canvas')
     let ctx = canv.getContext('2d')
-    let en = new LilShooter()
-    let p = new Poison()
+    // let en = new LilShooter()
+    // let p = new Poison()
+    // let a = new AssualtDroid()
+
+    // let shooter = LilShooter.constructor 
+    // let poison = Poison.constructor
+    // let assualt = AssualtDroid.constructor
+
+
+
+
+    let enemiesArr = []
+
+    setInterval(() => {
+        enemiesArr.push(new LilShooter());
+    }, 5000);
+    setInterval(() => {
+        enemiesArr.push(new Poison())
+    }, 7000);
+    setInterval(() => {
+        enemiesArr.push(new AssualtDroid())
+    }, 9000);
+
+
+
     canv.width = 700
     canv.height = 600
-    let game = new Game(ctx, mc,gamebg, canvas, en, p)
+    let game = new Game(ctx, mc,gamebg, canvas, enemiesArr)
     let keys = {}
     game.start()
 

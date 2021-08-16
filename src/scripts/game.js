@@ -1,13 +1,10 @@
-// const LilShooter = require('./lilShooter.js')
-
 class Game {
-    constructor(ctx, mc, img, canvas, en, p) {
+    constructor(ctx, mc, img, canvas, enemies) {
         this.ctx = ctx
         this.mc = mc
         this.img = img 
         this.canvas = canvas
-        this.en = en
-        this.p = p
+        this.enemies = enemies
         this.start = this.start.bind(this)
     }
 
@@ -21,8 +18,11 @@ class Game {
             this.mc.draw(this.ctx, this.mc.attackFrame)
         }
         this.mc.healthbar.draw(this.ctx) 
-        this.en.draw(this.ctx)
-        this.p.draw(this.ctx)
+        this.enemies.forEach(el=> el.draw(this.ctx))
+        // this.en.draw(this.ctx)
+        // this.p.draw(this.ctx)
+        // this.a.draw(this.ctx)
+        
 
         
     }
