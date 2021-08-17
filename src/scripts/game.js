@@ -57,7 +57,7 @@ class Game {
 
         })   
         this.collison()   
-        if (this.missedcount.count === 25) {
+        if (this.missedcount.count === 5) {
             alert('booy the city was sacked what you doin!!')
         }
     }
