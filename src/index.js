@@ -80,17 +80,21 @@ document.addEventListener('DOMContentLoaded', function(){
         button.classList.add('hidden')
         p.classList.add('hidden')
         div.classList.add('hidden')
+        rich.classList.remove('hidden')
+
         
 
         if (!game.over ){
             game.start()
-            rich.classList.remove('hidden')
         } else {
             enemiesArr = []
-            let mc = new Mc()
+            mc.x = 20 
+            mc.y = 400
+            mc.frameX = 0
+            mc.frameY = 0
+            mc.attackFrame = 0 
             let game = new Game(ctx, mc,gamebg, canvas, enemiesArr)
             game.start()  
-            rich.classList.remove('hidden')       
         }
         game.over = false
     })
