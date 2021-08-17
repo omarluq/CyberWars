@@ -1,4 +1,4 @@
-
+import KillCount from "./killCount"
 class Game {
     constructor(ctx, mc, img, canvas, enemies) {
         this.ctx = ctx
@@ -7,6 +7,7 @@ class Game {
         this.canvas = canvas
         this.enemies = enemies
         this.start = this.start.bind(this)
+        this.killCount = new KillCount ()
     }
 
     collison() {
@@ -23,7 +24,7 @@ class Game {
                 boom.src = './imgs/explosion/Explosion-Pack.png'
                 this.ctx.drawImage(boom, 64, 96, 36, 36, this.enemies[i].x - 5, this.enemies[i].y - 5, 36, 36)
                 this.enemies.splice(i, 1)
-                this.mc.killCount += 1
+                this.killCount.count += 1
             };
         }}
     }
@@ -39,6 +40,7 @@ class Game {
             this.mc.draw(this.ctx, this.mc.attackFrame)
         }
         this.mc.healthbar.draw(this.ctx)
+        this.killCount.draw(this.ctx)
         this.enemies.forEach(el=> el.draw(this.ctx))   
         this.collison()   
     }
