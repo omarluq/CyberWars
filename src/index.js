@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
 
                     if (keys['KeyQ']) {
-                        mc.attack = true
+                        mc.attack = true  
                         if (!mc.left){
                             let audio = new Audio("./imgs/sounds/2 clash 5.mp3")
                             audio.volume = 0.1
@@ -157,9 +157,10 @@ document.addEventListener('DOMContentLoaded', function(){
                                 clearInterval(att)
                                 mc.attack = false
                             }
-
+                        
                         
                     }, 50)} else {
+                        mc.attack = true  
                         let audio = new Audio("./imgs/sounds/2 clash 5.mp3")
                         audio.volume = 0.1
                         audio.play()

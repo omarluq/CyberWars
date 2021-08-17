@@ -8,7 +8,7 @@ class Poison extends Enemy {
         this.width = 156
         this.height = 48
         this.x = 610
-        this.points = 10 
+        this.points = 15
     }
 
     draw(ctx){

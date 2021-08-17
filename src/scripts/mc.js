@@ -15,6 +15,7 @@ class Mc {
         this.left = false
         this.healthbar = new Healthbar(20, 20, 70, 10, 50, '#72bbed' )
         this.attack = false
+        this.killCount = 0
         
     }
 
