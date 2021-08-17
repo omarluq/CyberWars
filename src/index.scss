@@ -40,7 +40,17 @@
     top: 400px; 
     left: 500px; 
     z-index: 1;
-    }
+}
+
+
+#richTag {
+    position: relative;
+    z-index: 1;
+    left: 65px;
+    bottom: 45px;
+    font-size: 10px;
+    color: white;
+}
 
 #richard:hover::after{ 
     content: attr(title); 
@@ -49,7 +59,7 @@
     top: -10px; 
     left: -15px;
     color: transparent;
-    }
+}
 
 
 #nav{ 

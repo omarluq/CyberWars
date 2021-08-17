@@ -23,7 +23,8 @@ class Mc {
     
 
     draw(ctx, frame) {
-        ctx.drawImage(this.img, this.width * this.frameX, this.height * frame, this.width, this.height, this.x, this.y , this.width, this.height)  
+        ctx.drawImage(this.img, this.width * this.frameX, this.height * frame, this.width, this.height, this.x, this.y , this.width, this.height)
+        
     }
   
 }

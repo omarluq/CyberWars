@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
     setInterval(() => {
         enemiesArr.push(new LilShooter());
-    }, 5000);
+    }, 2000);
     setInterval(() => {
         enemiesArr.push(new Poison())
-    }, 10000);
+    }, 5000);
     setInterval(() => {
         enemiesArr.push(new AssualtDroid())
-    }, 13000);
+    }, 10000);
 
 
 
