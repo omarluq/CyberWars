@@ -2,7 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 #body {
-  background-image: url(../imgs/background/bodybg.png);
+  background-image: url(../imgs/background/bodybg9.jpg);
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -14,16 +14,8 @@
   background: #c7a361;
   position: absolute;
   top: 120px;
-  right: 25%;
-  border: 1px solid black;
-}
-
-#canvas2 {
-  position: absolute;
-  background: transparent;
-  top: 460px;
-  right: 28%;
-  z-index: 1;
+  right: 27%;
+  border: 3px solid black;
 }
 
 #div1 {
@@ -58,7 +50,7 @@
 }
 
 #nav {
-  border: 1px solid black;
+  border: 2px solid black;
   margin: 2px;
   padding: 3px;
   position: absolute;
