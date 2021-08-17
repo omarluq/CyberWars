@@ -58,7 +58,7 @@ class Game {
 
         })   
         this.collison()   
-        if (this.missedcount.count === 1) {
+        if (this.missedcount.count === 5) {
             window.cancelAnimationFrame(play)
             this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height )
             this.over = true

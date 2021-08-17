@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function(){
     div.appendChild(button) 
 
     if (!game.over) {
-        p.innerText = 'Welcome greate adventurer, enter the waster lands'
+        p.innerText = 'Welcome great adventurer, enter the wasteland'
         button.innerText = "start"
         
     } 
@@ -247,14 +247,6 @@ document.addEventListener('DOMContentLoaded', function(){
         mc.frameY = 0 
     })
 
-
-
-
-
-
-    
-
-   
 
 })
 
