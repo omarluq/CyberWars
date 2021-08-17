@@ -60,8 +60,6 @@ class Game {
         this.collison()   
         if (this.missedcount.count === 1) {
             window.cancelAnimationFrame(play)
-            let rich = document.getElementById('richard')
-            rich.classList.add('hidden')
             this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height )
             this.over = true
         }

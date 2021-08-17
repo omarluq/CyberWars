@@ -66,7 +66,9 @@ document.addEventListener('DOMContentLoaded', function(){
         p.innerText = 'you lost'
         div.classList.remove('hidden')
         button.classList.remove('hidden')
-        p.classList.remove('hidden')}
+        p.classList.remove('hidden')
+        rich.classList.add('hidden')
+    }
         
     }, 50);
 
@@ -78,19 +80,19 @@ document.addEventListener('DOMContentLoaded', function(){
         button.classList.add('hidden')
         p.classList.add('hidden')
         div.classList.add('hidden')
+        
+
         if (!game.over ){
             game.start()
-           
+            rich.classList.remove('hidden')
         } else {
-            // button.classList.add('hidden')
-            // p.classList.add('hidden')
-            // div.classList.add('hidden')
             enemiesArr = []
             let mc = new Mc()
             let game = new Game(ctx, mc,gamebg, canvas, enemiesArr)
-            game.start()
-          
+            game.start()  
+            rich.classList.remove('hidden')       
         }
+        game.over = false
     })
 
     document.addEventListener('keydown', function(event){
