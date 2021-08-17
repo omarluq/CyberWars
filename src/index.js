@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }, 5000);
     setInterval(() => {
         enemiesArr.push(new AssualtDroid())
-    }, 10000);
+    }, 7000);
 
 
 
