@@ -35,9 +35,63 @@ document.addEventListener('DOMContentLoaded', function(){
     canv.height = 600
     let game = new Game(ctx, mc,gamebg, canvas, enemiesArr)
     let keys = {}
-    game.start()
+ 
 
-   
+    let rich = document.getElementById('richard')
+    rich.classList.add('hidden')
+    let body = document.getElementById("body")
+    let div = document.createElement('div')
+    div.id = 'GameOver'
+    let button = document.createElement('button')
+    let p = document.createElement('p')
+    
+    
+    p.id = 'lost'
+    
+    button.id = 'restart'
+    body.appendChild(div)
+    div.appendChild(p)
+    div.appendChild(button) 
+
+    if (!game.over) {
+        p.innerText = 'Welcome greate adventurer, enter the waster lands'
+        button.innerText = "start"
+        
+    } 
+
+
+    setInterval(() => {
+        if(game.over){
+        button.innerText = "restart"
+        p.innerText = 'you lost'
+        div.classList.remove('hidden')
+        button.classList.remove('hidden')
+        p.classList.remove('hidden')}
+        
+    }, 50);
+
+    
+
+    
+
+    button.addEventListener('click', function(e){
+        button.classList.add('hidden')
+        p.classList.add('hidden')
+        div.classList.add('hidden')
+        if (!game.over ){
+            game.start()
+           
+        } else {
+            // button.classList.add('hidden')
+            // p.classList.add('hidden')
+            // div.classList.add('hidden')
+            enemiesArr = []
+            let mc = new Mc()
+            let game = new Game(ctx, mc,gamebg, canvas, enemiesArr)
+            game.start()
+          
+        }
+    })
 
     document.addEventListener('keydown', function(event){
         

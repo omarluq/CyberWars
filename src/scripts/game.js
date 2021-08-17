@@ -11,6 +11,7 @@ class Game {
         this.start = this.start.bind(this)
         this.killCount = new KillCount ()
         this.missedcount = new MissedCount()
+        this.over = false
     }
 
 
@@ -36,8 +37,8 @@ class Game {
     }
 
 
-    draw() {
-        
+    draw(play) {
+        let self = this
         this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height )
         this.ctx.drawImage(this.img,70,100)
         if (!this.mc.attack) {
@@ -57,14 +58,19 @@ class Game {
 
         })   
         this.collison()   
-        if (this.missedcount.count === 5) {
-            alert('booy the city was sacked what you doin!!')
+        if (this.missedcount.count === 1) {
+            window.cancelAnimationFrame(play)
+            let rich = document.getElementById('richard')
+            rich.classList.add('hidden')
+            this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height )
+            this.over = true
         }
     }
 
     start() {
-        this.draw()
-        requestAnimationFrame(this.start)
+        
+        let play = window.requestAnimationFrame(this.start)
+        this.draw(play)
         
     }
 

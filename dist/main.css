@@ -1,6 +1,10 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+@font-face {
+  font-family: CyberPunk;
+  src: url(../Cyberpunk/Cyberpunk.ttf);
+}
 #body {
   background-image: url(../imgs/background/bodybg9.jpg);
   background-repeat: no-repeat;
@@ -75,4 +79,39 @@
 
 #footer li {
   list-style-type: "";
+}
+
+#GameOver {
+  position: relative;
+  bottom: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+#restart {
+  z-index: 3;
+  padding: 15px;
+  background-color: #c7a361;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: CyberPunk;
+  font-weight: 700;
+  text-shadow: 1px 1px white;
+}
+
+#lost {
+  z-index: 3;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: CyberPunk;
+  text-shadow: 1px 1px white;
+}
+
+.hidden {
+  display: none;
 }
