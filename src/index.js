@@ -44,20 +44,17 @@ document.addEventListener('DOMContentLoaded', function(){
     div.id = 'GameOver'
     let button = document.createElement('button')
     let p = document.createElement('p')
-    
-    
     p.id = 'lost'
+    p.innerText = 'Welcome great adventurer, enter the wasteland'
+    button.innerText = "start"
     
     button.id = 'restart'
     body.appendChild(div)
     div.appendChild(p)
     div.appendChild(button) 
 
-    if (!game.over) {
-        p.innerText = 'Welcome great adventurer, enter the wasteland'
-        button.innerText = "start"
-        
-    } 
+    
+
 
 
     setInterval(() => {
