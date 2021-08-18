@@ -49,10 +49,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-   
-
     
-
+    let game = new Game(ctx, mc,gamebg, canvas, enemiesArr)
     
 
     button.addEventListener('click', function(e){
@@ -69,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function(){
         setInterval(() => {
             enemiesArr.push(new AssualtDroid())
         }, 5000);
-        let game = new Game(ctx, mc,gamebg, canvas, enemiesArr)
+     
         
 
         if (!game.over ){
@@ -77,10 +75,16 @@ document.addEventListener('DOMContentLoaded', function(){
         } else {
             location.reload()
         }
+       
         game.over = false
+       
+        
     })
 
 
+
+    
+        
     setInterval(() => {
         if(game.over){
         button.innerText = "restart"
@@ -90,9 +94,11 @@ document.addEventListener('DOMContentLoaded', function(){
         button.classList.remove('hidden')
         p.classList.remove('hidden')
         rich.classList.add('hidden')
-    }
-        
-    }, 50);
+    } }, 50);
+
+
+
+    
 
     document.addEventListener('keydown', function(event){
         
