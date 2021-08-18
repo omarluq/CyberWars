@@ -5,13 +5,13 @@ class MissedCount {
 
 
     draw(ctx) {
-        ctx.beginPath()
-        ctx.rect(650, 20, 40, 30)
+        // ctx.beginPath()
+        // ctx.rect(650, 20, 40, 30)
         ctx.fillStyle = 'black'
         ctx.strokeStyle = "black"
         ctx.stroke()
-        ctx.font = "20px black"
-        ctx.fillText(this.count,660, 41.5 )
+        ctx.font = "13px CyberPunk"
+        ctx.fillText(`missed bots: ${this.count}`,570, 41.5 )
     }
 
 
