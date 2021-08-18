@@ -1,6 +1,6 @@
 @font-face {
     font-family: CyberPunk;
-    src: url(../Cyberpunk/Cyberpunk.ttf);
+    src: url(../starwars.ttf);
 }
 
 #body{
@@ -105,7 +105,6 @@
     font-size: 20px;
     border-radius: 5px;
     font-family: CyberPunk;
-    font-weight: 700;
     text-shadow: 1px 1px white;
 }
 
@@ -114,7 +113,6 @@
     z-index: 3;
     text-align: center;
     font-size: 20px;
-    font-weight: 700;
     font-family: CyberPunk;
     text-shadow: 1px 1px white;
 
