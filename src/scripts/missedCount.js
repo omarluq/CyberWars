@@ -5,8 +5,7 @@ class MissedCount {
 
 
     draw(ctx) {
-        // ctx.beginPath()
-        // ctx.rect(650, 20, 40, 30)
+       
         ctx.fillStyle = 'black'
         ctx.strokeStyle = "black"
         ctx.stroke()

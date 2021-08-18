@@ -5,8 +5,7 @@ class KillCount {
 
 
     draw(ctx) {
-        // ctx.beginPath()
-        // ctx.rect(600, 20, 40, 30)
+    
         ctx.fillStyle = 'black'
         ctx.strokeStyle = "black"
         ctx.shadowColor = "white"
