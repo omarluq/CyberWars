@@ -19,21 +19,13 @@ document.addEventListener('DOMContentLoaded', function(){
     let ctx = canv.getContext('2d')
     let enemiesArr = []
 
-    setInterval(() => {
-        enemiesArr.push(new LilShooter());
-    }, 2000);
-    setInterval(() => {
-        enemiesArr.push(new Poison())
-    }, 3000);
-    setInterval(() => {
-        enemiesArr.push(new AssualtDroid())
-    }, 5000);
+    
 
 
 
     canv.width = 700
     canv.height = 600
-    let game = new Game(ctx, mc,gamebg, canvas, enemiesArr)
+    
     let keys = {}
  
 
@@ -57,6 +49,38 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
+   
+
+    
+
+    
+
+    button.addEventListener('click', function(e){
+        button.classList.add('hidden')
+        p.classList.add('hidden')
+        div.classList.add('hidden')
+        rich.classList.remove('hidden')
+        setInterval(() => {
+            enemiesArr.push(new LilShooter());
+        }, 2000);
+        setInterval(() => {
+            enemiesArr.push(new Poison())
+        }, 3000);
+        setInterval(() => {
+            enemiesArr.push(new AssualtDroid())
+        }, 5000);
+        let game = new Game(ctx, mc,gamebg, canvas, enemiesArr)
+        
+
+        if (!game.over ){
+            game.start()
+        } else {
+            location.reload()
+        }
+        game.over = false
+    })
+
+
     setInterval(() => {
         if(game.over){
         button.innerText = "restart"
@@ -69,26 +93,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
         
     }, 50);
-
-    
-
-    
-
-    button.addEventListener('click', function(e){
-        button.classList.add('hidden')
-        p.classList.add('hidden')
-        div.classList.add('hidden')
-        rich.classList.remove('hidden')
-
-        
-
-        if (!game.over ){
-            game.start()
-        } else {
-            location.reload()
-        }
-        game.over = false
-    })
 
     document.addEventListener('keydown', function(event){
         
