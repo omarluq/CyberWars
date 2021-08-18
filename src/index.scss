@@ -26,9 +26,9 @@
 }
 
 #richard{
-    position: absolute; 
-    top: 400px; 
-    left: 500px; 
+    position: relative; 
+    top: 350px; 
+    right: -7px; 
     z-index: 1;
 }
 
@@ -39,17 +39,11 @@
     left: 65px;
     bottom: 45px;
     font-size: 10px;
-    color: white;
+    color: black;
+    font-weight: bold;
 }
 
-#richard:hover::after{ 
-    content: attr(title); 
-    font-size: 10px; 
-    position: absolute; 
-    top: -10px; 
-    left: -15px;
-    color: transparent;
-}
+
 
 
 #nav{ 
