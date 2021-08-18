@@ -25,7 +25,7 @@ class Game {
             (this.mc.y + 50  + (this.mc.height - 50))> this.enemies[i].y  + 20 && 
             this.mc.attack
         ) {
-            this.enemies[i].points -= 5 
+            this.enemies[i].points -=5 
             if (this.enemies[i].points === 0) {
                 let boom = new Image() 
                 boom.src = './imgs/explosion/Explosion-Pack.png'

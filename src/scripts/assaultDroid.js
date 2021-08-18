@@ -9,7 +9,7 @@ class AssualtDroid extends Enemy {
         this.width = 161
         this.height = 39
         this.x = 620
-        this.points = 20
+        this.points = 200
         
     }
 

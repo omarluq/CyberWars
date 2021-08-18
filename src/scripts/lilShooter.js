@@ -8,7 +8,7 @@ class LilShooter extends Enemy {
         this.width = 128
         this.height = 64
         this.x = 600
-        this.points = 10 
+        this.points = 140
     }
 
     draw(ctx){
