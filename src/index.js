@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let button = document.createElement('button')
     let p = document.createElement('p')
     p.id = 'lost'
-    p.innerText = 'Welcome time traveler, its the year 2170, the robots have rebelled, use vax the brave warrior to stop the bots from entering the human colony, use W, S, A, D for movement and Enter to swing your sowrd!'
+    p.innerText = 'Welcome time traveler, its the year 2170, the robots have rebelled, use vax the brave warrior to stop the bots from entering the human colony, use W, S, A, D for movement and Enter to swing your sword!'
     button.innerText = "start"
     
     button.id = 'restart'
