@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let button = document.createElement('button')
     let p = document.createElement('p')
     p.id = 'lost'
-    p.innerText = 'Welcome great adventurer, enter the wasteland'
+    p.innerText = 'Welcome time traveler, its the year 2170, the robots have rebelled, use vax the brave warrior to stop the bots from entering the human colony, use W, S, A, D for movement and Q for attacking!'
     button.innerText = "start"
     
     button.id = 'restart'
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function(){
     div.appendChild(p)
     div.appendChild(button) 
 
-    
+   
 
 
 
