@@ -48,3 +48,6 @@ Thursday Morning - 8/19/21 - The final polishing will be done.
 
 Art and sprites courtesy of Penusbmic https://penusbmic.itch.io/
 
+special thanks to Daniel Mechenko github: https://github.com/dmechenko/ && Richard Leung github: https://github.com/rzleu
+
+
