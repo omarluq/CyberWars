@@ -84,14 +84,7 @@ document.addEventListener('DOMContentLoaded', function(){
         if (!game.over ){
             game.start()
         } else {
-            enemiesArr = []
-            mc.x = 20 
-            mc.y = 400
-            mc.frameX = 0
-            mc.frameY = 0
-            mc.attackFrame = 0 
-            let game = new Game(ctx, mc,gamebg, canvas, enemiesArr)
-            game.start()  
+            location.reload()
         }
         game.over = false
     })
@@ -133,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     aud.volume = 0.2
                     let up =setInterval(function(){
                     mc.img.src = "./imgs/hero/teleport.png"
-                    if(mc.y > 250){mc.y -= mc.speed}
+                    if(mc.y > 250){mc.y -= 2}
                     mc.frameY += 1
                     if (mc.frameY === 9) {
                          clearInterval(up)
@@ -147,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function(){
                         aud.volume = 0.2
                         let up =setInterval(function(){
                             mc.img.src = "./imgs/hero/teleportl.png"
-                            if(mc.y > 250){mc.y -= mc.speed}
+                            if(mc.y > 250){mc.y -= 2}
                             mc.frameY += 1
                             if (mc.frameY === 9) {
                                 clearInterval(up)
@@ -170,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function(){
                         aud.volume = 0.2
                         let down = setInterval(function(){
                         mc.img.src = "./imgs/hero/teleport.png"
-                        if (mc.y < 490 ){mc.y += mc.speed }
+                        if (mc.y < 490 ){mc.y += 2 }
                         mc.frameY += 1
                         if (mc.frameY === 9 ) {
                             clearInterval(down)
@@ -185,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function(){
                             mc.img.src = "./imgs/hero/teleportl.png"
                             console.log(mc.height);
                             
-                            if (mc.y < 490 ){mc.y += mc.speed }
+                            if (mc.y < 490 ){mc.y += 2 }
                             mc.frameY += 1
                             if (mc.frameY === 9 ) {
                                 clearInterval(down)
