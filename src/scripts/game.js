@@ -20,7 +20,7 @@ class Game {
     collison() {
         for(let i=0; i < this.enemies.length; i++){
         if ((this.mc.x + 20 ) < this.enemies[i].x + 85 + this.enemies[i].width - 100 && 
-            (this.mc.x + 20 + (this.mc.width - 50) )  > this.enemies[i].x  + 100&& 
+            (this.mc.x + 20 + (this.mc.width - 30) )  > this.enemies[i].x  + 100&& 
             (this.mc.y + 50) < this.enemies[i].y  + 20 + this.enemies[i].height - 30 && 
             (this.mc.y + 50  + (this.mc.height - 50))> this.enemies[i].y  + 20 
         ) {
@@ -33,6 +33,7 @@ class Game {
                 this.ctx.drawImage(boom, 64, 96, 36, 36, this.enemies[i].x + 85, this.enemies[i].y + 20, 36, 36)
                 this.enemies.splice(i, 1)
                 this.killCount.count += 1
+                this.mc.killCount ++ 
             } } else {
                 this.enemies[i].x += 0.5
             }
@@ -60,7 +61,7 @@ class Game {
 
         })   
         this.collison()   
-        if (this.missedcount.count === 5) {
+        if (this.missedcount.count === 10) {
             window.cancelAnimationFrame(play)
             this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height )
             this.over = true

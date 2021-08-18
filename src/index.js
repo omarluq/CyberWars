@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', function(){
     setInterval(() => {
         if(game.over){
         button.innerText = "restart"
-        p.innerText = 'you lost'
+        p.innerText = `Gameover 
+        score: ${mc.killCount}`
         div.classList.remove('hidden')
         button.classList.remove('hidden')
         p.classList.remove('hidden')

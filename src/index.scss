@@ -28,8 +28,9 @@
 #richard{
     position: relative; 
     top: 350px; 
-    right: -7px; 
+    right: 345px; 
     z-index: 1;
+    
 }
 
 
@@ -38,9 +39,10 @@
     z-index: 1;
     left: 65px;
     bottom: 45px;
-    font-size: 10px;
+    font-size: 11px;
     color: black;
-    font-weight: bold;
+    font-weight: 900;
+    text-shadow: 1px 1px white;
 }
 
 
