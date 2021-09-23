@@ -6,7 +6,7 @@ Cyber wars is an arcade shooter style game , in the year 2170 the robots rebelle
 
 # Functionality & MVP
 Users will be able to:
-  * Start, pause, and restart the game.
+  * Start and restart the game.
   * Move using up, down, left and right arrow keys, shoot your weapon using the Q key.
   * Toggle music on and off.
 
