@@ -1,5 +1,10 @@
 # [Cyber Wars](https://omarluq.github.io/CyberWars/)
 
+
+<p align="center">
+  <img src="https://github.com/omarluq/CyberWars/blob/main/imgs/landingpage.png" />
+</p>
+
 # Background
 
 Cyber wars is an arcade shooter style game , in the year 2170 the robots rebelled against humans due to all the damage that we have caused to the planet, your mission is to protect one of the last standing human cities and prevent the robots from entering it.
@@ -41,6 +46,12 @@ Tuesday - 8/17/21 - I will have a working skeleton with proper game logic.
 Wednesday - 8/18/21 - I will have added functionality and effects/add a menu button, start/restart button, health bars, sound effects.
 
 Thursday Morning - 8/19/21 - The final polishing will be done.
+
+# Development
+Collision detection calculations using vanilla JS 
+<p align="center">
+  <img src="https://github.com/omarluq/CyberWars/blob/main/imgs/code.png" />
+</p>
 
 
 
