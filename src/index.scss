@@ -131,3 +131,46 @@
 
 
 
+.richtext{
+    position: absolute;
+    font-size: 8px;
+    font-weight: bold;
+    // border: 1px solid ;
+    border-radius: 25px;
+    padding: 7px;
+    background-color: white;
+    width: 100px;
+    text-align: center;
+    top: -100px; 
+    right: -50px; 
+}
+
+.richtexthidden{
+    display: none;
+}
+
+
+
+
+richtext:before{
+    left: 30px;
+	bottom: -50px;
+	border: 1px solid black;
+	// border-color: black transparent transparent black
+}
+
+.richtext:after{
+    left: 38px;
+	bottom: -30px;
+	border: 15px solid;
+	border-color: white transparent transparent white;
+}
+
+
+.richtext:before,
+.richtext:after {
+    content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+}

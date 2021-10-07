@@ -54,10 +54,20 @@ document.addEventListener('DOMContentLoaded', function(){
     
 
     button.addEventListener('click', function(e){
+        let richtext = document.getElementById('richard-text')
         button.classList.add('hidden')
         p.classList.add('hidden')
         div.classList.add('hidden')
         rich.classList.remove('hidden')
+        rich.addEventListener('mouseover',(e)=>{
+            richtext.classList.remove('richtexthidden')
+            richtext.classList.add('richtext')
+            setTimeout(function() {
+                richtext.classList.remove('richtext')
+                richtext.classList.add('richtexthidden')
+              }, 12000)
+        })
+
         setInterval(() => {
             enemiesArr.push(new LilShooter());
         }, 2000);
