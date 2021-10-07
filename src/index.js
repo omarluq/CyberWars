@@ -250,6 +250,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.addEventListener('keyup', function(event){
         delete keys[event.code]
         mc.frameY = 0 
+        mc.attackFrame = 0 
     })
 
 
