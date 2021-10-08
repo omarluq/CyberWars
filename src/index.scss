@@ -133,16 +133,17 @@
 
 .richtext{
     position: absolute;
-    font-size: 8px;
+    font-size: 13px;
     font-weight: bold;
     // border: 1px solid ;
     border-radius: 25px;
     padding: 7px;
     background-color: white;
-    width: 100px;
+    width: 200px;
+    height: 100px;
     text-align: center;
-    top: -100px; 
-    right: -50px; 
+    top: -150px; 
+    right: -150px; 
 }
 
 .richtexthidden{
