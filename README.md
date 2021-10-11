@@ -49,12 +49,43 @@ Thursday Morning - 8/19/21 - The final polishing will be done.
 
 # Development
 Collision detection calculations using vanilla JS 
-<p align="center">
-  <img src="https://github.com/omarluq/CyberWars/blob/main/imgs/code.png" />
-</p>
-
-
-
+```Javascript 
+  collison() {
+    for (let i = 0; i < this.enemies.length; i++) {
+      if (
+        this.mc.x + 20 < this.enemies[i].x + 85 + this.enemies[i].width - 100 &&
+        this.mc.x + 20 + (this.mc.width - 30) > this.enemies[i].x + 100 &&
+        this.mc.y + 50 < this.enemies[i].y + 20 + this.enemies[i].height - 30 &&
+        this.mc.y + 50 + (this.mc.height - 50) > this.enemies[i].y + 20
+      ) {
+        if (this.mc.attack) {
+          this.enemies[i].points -= 5;
+          this.enemies[i].x += 0.5;
+          if (this.enemies[i].points === 0) {
+            let boom = new Image();
+            boom.src = "./imgs/explosion/Explosion-Pack.png";
+            this.ctx.drawImage(
+              boom,
+              64,
+              96,
+              36,
+              36,
+              this.enemies[i].x + 85,
+              this.enemies[i].y + 20,
+              36,
+              36
+            );
+            this.enemies.splice(i, 1);
+            this.killCount.count += 1;
+            this.mc.killCount++;
+          }
+        } else {
+          this.enemies[i].x += 0.5;
+        }
+      }
+    }
+  }
+```
 # Credits
 
 Art and sprites courtesy of Penusbmic https://penusbmic.itch.io/
